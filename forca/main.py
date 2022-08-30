@@ -1,7 +1,7 @@
 from random import *
 from random import randint
 
-palavras = ["teste", "ellie", "the last of us"]
+palavras = ["turistas", "protesto", "elegante", "telefone", "barbeiro", "olhos"]
 palavra = palavras[randint(0, len(palavras) -1)]
 palavra_final = "_" * len(palavra)
 letrasPalavra = []
@@ -20,7 +20,7 @@ while continuar and palavra_final.count("_") > 0:
         palavra_final[palavra.find(palpite)].replace("_", palpite)
         print(palavra_final)
         print(letrasPalavra)
-        print(f'Palavras ja útilizada: {letras}')
+        print(f'Letras ja útilizada: {letras}')
     else:           
         chances = chances - 1
         print(f'{chances} chances restantes.') 
