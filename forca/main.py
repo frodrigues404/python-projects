@@ -9,14 +9,18 @@ letras = []
 chances = 5
 continuar = True
 
-print(f'Palavra: {palavra}')
+print(f'A palavra contem {len(palavra)} letras.')
+print(palavra_final)
+print(f'Palavra: {palavra}') #Teste temporário
 
-while continuar and palavra_final.count("_") > 0:
+while palavra_final.count("_") > 0:
     palpite = input("Digite uma letra: ")
     letras.append(palpite)
     
     if palpite in palavra and palpite not in letrasPalavra:
         letrasPalavra.append(palpite)
+        #print(palavra_final[palavra.find(palpite)])
+        #palavra_final = palavra_final.replace(palavra_final[palavra.find(palpite)], palpite)
         palavra_final[palavra.find(palpite)].replace("_", palpite)
         print(palavra_final)
         print(letrasPalavra)
@@ -24,7 +28,6 @@ while continuar and palavra_final.count("_") > 0:
     else:           
         chances = chances - 1
         print(f'{chances} chances restantes.') 
-    
+
     if chances <= 0:
-        continuar = False
-    
+        break
