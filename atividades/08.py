@@ -1,15 +1,12 @@
-# #obrigatório Faça um programa que pergunte o preço de três produtos e informe qual
-# produto você deve comprar, sabendo que a decisão é sempre pelo mais barato.
 produto1 = float(input("Valor do primeiro produto: R$"))
 produto2 = float(input("Valor do segundo produto: R$"))
 produto3 = float(input("Valor do terceiro produto: R$"))
 
-menor = produto1
-maior = produto1
+produtos = [produto1, produto2, produto3]
 
-if produto2 < menor:
-    menor = 'produto 2'
-elif produto3 < menor:
-    menor = 'produto 3'
+produtos.sort()
 
-print(menor)
+print(produtos)
+
+print(f'O menor produto é de R${produtos[0]}')
+print(f'O maior produto é de R${produtos[2]}')
