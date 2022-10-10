@@ -1,6 +1,5 @@
 from operator import le
 
-
 vogais = ['a', 'e', 'i', 'o', 'u']
 letra = input("Digite uma letra: ").lower()
 if letra in vogais:
