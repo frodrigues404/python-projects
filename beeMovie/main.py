@@ -1,10 +1,12 @@
+from tracemalloc import StatisticDiff
 import pyautogui
 from time import sleep
 
-sleep(5)
+sleep(2)
 
-forLoop = open("beemovie.txt", 'r')
+palavras = open("beemovie.txt", 'r')
+#palavras.close()
 
-for word in forLoop:
+for word in palavras:
     pyautogui.typewrite(word)
     pyautogui.press("enter")
